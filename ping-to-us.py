@@ -9,12 +9,12 @@ from bs4 import BeautifulSoup
 
 # Configuration
 LOSS_THRESHOLD = 3  # seconds
-TARGET_HOST = "95.179.139.97"  # Replace with the IP you want to ping
+TARGET_HOST = "127.0.0.1"  # Replace with the IP you want to ping
 ENABLE_LOGGING = True  # Set to False to disable logging
-LOG_ONLY_ON_LOSS = False  # Set to True to log only on packet loss
+LOG_ONLY_ON_LOSS = True  # Set to True to log only on packet loss
 
 # File to store the IP and subnet information
-INFO_FILE = '/mnt/data/server_info.json'
+INFO_FILE = 'server_info.json'
 
 # Function to read Telegram credentials from the file
 def read_telegram_credentials(file_path):
@@ -23,7 +23,7 @@ def read_telegram_credentials(file_path):
         return lines[0].strip(), lines[1].strip()
 
 # Read the Telegram credentials
-TELEGRAM_TOKEN, CHAT_ID = read_telegram_credentials('../../telegram-token-dev')
+TELEGRAM_TOKEN, CHAT_ID = read_telegram_credentials('telegram-info')
 
 def ping(ip):
     try:
