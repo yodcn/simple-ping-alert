@@ -1,6 +1,6 @@
 # Simple Ping Alert
 
-This is a super simple script to check the availability of a specified IP address via ping. If the server becomes unreachable for a specified amount of time, the script will send an alert message via Telegram, including the source IP and BGP Subnet information for further checking by the Network Operations Center (NOC).
+This is a super simple script to check the availability of a specified IP address via ping. If the server becomes unreachable for a specified amount of time, the script will send an alert message via Telegram, including the source IP and BGP Subnet information for further checking by the NOC.
 
 ## Configuration
 
